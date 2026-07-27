@@ -1,0 +1,1 @@
+export const API_URL = 'https://task-manager-app-production-7356.up.railway.app/api';

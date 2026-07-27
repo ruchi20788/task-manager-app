@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import axios from 'axios';
+import { API_URL } from '../config';
 
 export default function Signup({ setToken }) {
   const [form, setForm] = useState({ name: '', email: '', password: '' });
@@ -11,7 +12,7 @@ export default function Signup({ setToken }) {
     e.preventDefault();
     setError('');
     try {
-      const res = await axios.post('http://localhost:5000/api/auth/signup', form);
+const res = await axios.post(`${API_URL}/auth/signup`, form);
       localStorage.setItem('token', res.data.token);
       setToken(res.data.token);
       navigate('/dashboard');

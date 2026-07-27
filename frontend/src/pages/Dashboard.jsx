@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-
+import { API_URL } from '../config';
 const STATUSES = ['To Do', 'In Progress', 'Done'];
 
 export default function Dashboard({ token, setToken }) {
@@ -11,10 +11,9 @@ export default function Dashboard({ token, setToken }) {
   const navigate = useNavigate();
 
   const api = axios.create({
-    baseURL: 'http://localhost:5000/api',
+    baseURL: API_URL,
     headers: { Authorization: `Bearer ${token}` },
-  });
-
+});
   const fetchTasks = async () => {
     try {
       const res = await api.get('/tasks');
