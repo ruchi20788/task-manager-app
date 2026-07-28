@@ -6,7 +6,7 @@ A full-stack Task Management web application that helps users organize, track, a
 
 ## 🚀 Live Demo
 
-🔗 **Live Demo:** https://your-live-demo-link.com
+🔗 **Live Demo:** [https://your-live-demo-link.com](https://task-manager-app-ruchita2.vercel.app/login)
 
 ---
 
